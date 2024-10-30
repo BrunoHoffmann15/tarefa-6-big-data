@@ -18,6 +18,8 @@ def csv_to_json(csv_file_path, json_file_path):
                 row['price'] = float(row['price'])
             if 'rating' in row:
                 row['rating'] = float(row['rating'])
+            if 'votes' in row:
+                row['votes'] = int(row['votes'])
                 
             # Adicionar o dicionário à lista
             data.append(row)
