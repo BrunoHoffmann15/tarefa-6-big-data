@@ -14,6 +14,10 @@ def csv_to_json(csv_file_path, json_file_path):
                 row['platforms'] = eval(row['platforms'])
             if 'genres' in row:
                 row['genres'] = eval(row['genres'])
+            if 'price' in row:
+                row['price'] = float(row['price'])
+            if 'rating' in row:
+                row['rating'] = float(row['rating'])
                 
             # Adicionar o dicionário à lista
             data.append(row)
